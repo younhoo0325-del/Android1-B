@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#6200EE"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:text="온도 변환기"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="5dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="섭씨 온도를 입력하세요."
+            android:textColor="#777777"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/editCelsius"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="섭씨 온도를 입력하세요"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#6200EE"
+            android:text="화씨온도 계산"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="화씨 온도를 입력하세요."
+            android:textColor="#777777"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/editFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="온도를 입력하세요"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnCelsius"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#6200EE"
+            android:text="섭씨온도 계산"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="결과"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
