@@ -1,0 +1,31 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="몇학년 입니까?"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:text="학년 입력 바람"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>
