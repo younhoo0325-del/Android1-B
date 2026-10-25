@@ -1,0 +1,4 @@
+package com.example.project;
+
+import android.content.Context;import android.view.*;import android.widget.*;import java.util.List;
+public class MySpinnerAdapter extends ArrayAdapter<CustomItem>{private final Context context;private final List<CustomItem> items;public MySpinnerAdapter(Context c,List<CustomItem> items){super(c,0,items);context=c;this.items=items;}@Override public View getView(int p,View v,ViewGroup par){return make(p,v,par);}@Override public View getDropDownView(int p,View v,ViewGroup par){return make(p,v,par);}private View make(int p,View v,ViewGroup par){if(v==null)v=LayoutInflater.from(context).inflate(R.layout.child_listview,par,false);((ImageView)v.findViewById(R.id.imageView)).setImageResource(items.get(p).getImage());((TextView)v.findViewById(R.id.textView)).setText(items.get(p).getName());return v;}}

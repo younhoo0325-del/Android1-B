@@ -1,0 +1,4 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="10dp">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:background="#0044FF" android:textColor="#FFFFFF" android:textSize="20sp" android:padding="10dp" android:text="AdapterView 종합 모음"/>
+<ListView android:id="@+id/listView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

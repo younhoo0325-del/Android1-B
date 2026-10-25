@@ -1,0 +1,4 @@
+package com.example.project;
+
+import android.os.Bundle;import android.view.View;import android.widget.*;import androidx.appcompat.app.AppCompatActivity;
+public class SpinnerActivity extends AppCompatActivity{@Override protected void onCreate(Bundle b){super.onCreate(b);setContentView(R.layout.activity_spinner);setTitle("Spinner 예제");ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.fruits1,android.R.layout.simple_spinner_dropdown_item);Spinner spinner=findViewById(R.id.spinner);spinner.setPrompt("과일을 고르세요.");spinner.setAdapter(adapter);spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){boolean first=false;public void onItemSelected(AdapterView<?> p,View v,int pos,long id){if(first)Toast.makeText(SpinnerActivity.this,adapter.getItem(pos)+"는 맛있다",Toast.LENGTH_SHORT).show();else first=true;}public void onNothingSelected(AdapterView<?> p){}});findViewById(R.id.button).setOnClickListener(v->finish());}}

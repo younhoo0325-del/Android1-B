@@ -1,0 +1,4 @@
+package com.example.project;
+
+import android.content.Context;import android.view.*;import android.widget.*;
+@SuppressWarnings("deprecation") public class GalleryAdapter extends BaseAdapter{private final Context context;private final int[] poster;private final ImageView preview;public GalleryAdapter(Context c,int[] posters,ImageView preview){context=c;poster=posters;this.preview=preview;}@Override public int getCount(){return poster.length;}@Override public Object getItem(int p){return poster[p];}@Override public long getItemId(int p){return p;}@Override public View getView(int p,View old,ViewGroup parent){ImageView image=new ImageView(context);image.setLayoutParams(new Gallery.LayoutParams(100,150));image.setScaleType(ImageView.ScaleType.FIT_CENTER);image.setPadding(5,5,5,5);image.setImageResource(poster[p]);image.setOnTouchListener((v,e)->{preview.setImageResource(poster[p]);return false;});return image;}}

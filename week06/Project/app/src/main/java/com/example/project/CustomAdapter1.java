@@ -1,0 +1,4 @@
+package com.example.project;
+
+import android.content.Context;import android.view.*;import android.widget.*;import java.util.ArrayList;
+public class CustomAdapter1 extends BaseAdapter{private final Context context;private final ArrayList<CustomItem> items;public CustomAdapter1(Context c,ArrayList<CustomItem> i){context=c;items=i;}@Override public int getCount(){return items.size();}@Override public CustomItem getItem(int p){return items.get(p);}@Override public long getItemId(int p){return p;}@Override public View getView(int p,View old,ViewGroup parent){View v=old==null?LayoutInflater.from(context).inflate(R.layout.child_listview,parent,false):old;((ImageView)v.findViewById(R.id.imageView)).setImageResource(getItem(p).getImage());((TextView)v.findViewById(R.id.textView)).setText(getItem(p).getName());return v;}}
